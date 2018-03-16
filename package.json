@@ -20,7 +20,6 @@
     "react-native": "0.54.2",
     "react-native-config": "^0.11.5",
     "react-native-push-notification": "^3.0.2",
-    "react-native-sentry": "^0.35.3",
     "react-navigation": "^1.5.7"
   },
   "devDependencies": {
