@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint index.ios.js index.android.js src",
+    "precommit": "lint-staged"
   },
   "dependencies": {
     "lodash": "^4.17.5",
@@ -40,6 +42,12 @@
     "prettier": "^1.11.1",
     "react-devtools": "^3.1.0",
     "react-test-renderer": "^16.2.0"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --single-quote --trailing-comma es5 --tab-width 4 --write",
+      "git add"
+    ]
   },
   "jest": {
     "preset": "react-native"
